@@ -102,7 +102,7 @@ y_pred = model.predict(X_test)
 y_pred = (y_pred > 0.5).astype(int)
 
 #Avaliando
-print("Aveliação do modelo nos dados de teste: ")
+print("Avaliação do modelo nos dados de teste: ")
 model.evaluate(X_test, y_test)
 
 #metricas de classificação
