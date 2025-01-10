@@ -1,1 +1,5 @@
 novadrive
+meu_modelo.keras
+modelcreationn.ipynb
+objects/*
+!objects/.gitkeep

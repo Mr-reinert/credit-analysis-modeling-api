@@ -70,19 +70,18 @@ X_test = selector.transform(X_test)
 joblib.dump(selector, './objects/selector.joblib')
 
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
-    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Dense(256, activation='relu', input_shape=(X_train.shape[1],)),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(64, activation='relu'),
-    tf.keras.layers.Dropout(0.3),
-    tf.keras.layers.Dense(32, activation='relu'),
-    tf.keras.layers.Dropout(0.3),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
 #configurando o otimizador
-optimizer = tf.keras.optimizers.Adam(learning_rate=0.001)
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.0005)
 
-#compilando o modelo
+#compilando modelo
 model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
 #Treinamento do modelo
