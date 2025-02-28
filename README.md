@@ -1,4 +1,4 @@
-# Para executar esse projeto será crie o ambiente virtual e instale as dependencias necessárias
+# Para executar esse projeto crie o ambiente virtual e instale as dependencias necessárias
 
 
  1. Criando um ambiente virtual 
